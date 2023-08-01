@@ -1,0 +1,30 @@
+{
+  "name": "Solid.js Chrome Extension Starter Kit",
+  "description": "Solid.js Starter Kit for your next Chrome extension",
+  "version": "0.1",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_title": "Chrome Extension",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "serviceWorker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.linkedin.com/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "icons": {
+    "16": "assets/logo-128.png",
+    "48": "assets/logo-128.png",
+    "128": "assets/logo-128.png"
+  }
+}
