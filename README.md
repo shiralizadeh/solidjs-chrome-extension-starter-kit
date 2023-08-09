@@ -5,7 +5,9 @@ Solid.js Starter Kit for your next Chrome extension
 ## Features
 
 - Integration with Solid.js
-- Options
+- Options Page
+- Popup Page
+- Content Page
 
 ## Release Notes
 
